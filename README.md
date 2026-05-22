@@ -1,5 +1,7 @@
 # Rocket Trajectory Simulator
 
+![Rocket trajectory animation](docs/flight.gif)
+
 Status: in development
 
 A 2D rocket trajectory simulator written in Python. This project will model
