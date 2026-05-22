@@ -15,8 +15,7 @@ import numpy as np
 # 2. User controls / given values
 # ---------------------------------------------------------------------------
 
-# Rocket masses, in kilograms.
-# Dry mass is the empty rocket. Propellant mass is the fuel available to burn.
+# Mass values are in kilograms.
 DRY_MASS_KG = 50.0
 PROPELLANT_MASS_KG = 100.0
 
@@ -108,7 +107,6 @@ def rk4_step(time_s: float, state: np.ndarray, dt_s: float) -> np.ndarray:
 
 def simulate() -> dict[str, np.ndarray]:
     """Run the rocket trajectory simulation until the rocket returns to ground."""
-    # Start clock at launch.
     time_s = 0.0
 
     # The rocket starts on the ground at rest: x=0, y=0, vx=0, vy=0.
