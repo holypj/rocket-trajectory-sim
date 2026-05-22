@@ -2,14 +2,20 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
+OUTPUT_DIR = Path("output")
+MPL_CONFIG_DIR = OUTPUT_DIR / ".matplotlib"
+MPL_CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+os.environ.setdefault("MPLCONFIGDIR", str(MPL_CONFIG_DIR))
+
+import matplotlib
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from simulator import simulate
-
-
-OUTPUT_DIR = Path("output")
 
 
 def plot_altitude(time_s, altitude_m) -> None:
